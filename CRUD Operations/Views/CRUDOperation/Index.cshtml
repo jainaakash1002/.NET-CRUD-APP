@@ -1,0 +1,44 @@
+﻿
+@model CRUD_Operations.Models.StudentData
+@{
+    Layout = null;
+}
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <h4>CRUD Operations</h4>
+    <div>
+        <form action="/CRUDOperation/Index" method="post">
+            <table border="1" width="500" height="300" bgcolor="yellow">
+                <tr>
+                    <td>Roll No</td>
+                    <td><input type="text" name="rollno" value="@Model.rollno" />&nbsp&nbsp&nbsp<input type="submit" name="cbutton" value="Search" @ViewBag.searchbutton /><br /><font color="RED">@ViewBag.searchresult</font></td>
+
+
+                </tr>
+                <tr>
+                    <td>Student Name</td>
+                    <td><input type="text" name="sname" value="@Model.sname" /></td>
+                </tr>
+                <tr>
+
+                    <td colspan="2">
+                        <input type="submit" name="cbutton" value="AddNew" @ViewBag.addnewbutton />&nbsp&nbsp
+                        <input type="submit" name="cbutton" value="Save" @ViewBag.savebutton />&nbsp&nbsp
+                        <input type="submit" name="cbutton" value="Update" @ViewBag.updatebutton />&nbsp&nbsp
+                        <input type="submit" name="cbutton" value="Delete" @ViewBag.Deletebutton />&nbsp&nbsp
+                        <input type="submit" name="cbutton" value="Cancel" @ViewBag.cancelbutton />
+                
+                    </td>
+                </tr>
+
+            </table>
+
+        </form>
+    </div>
+</body>
+</html>
